@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web on 叶落天博客</title>
+    <link>https://yeluotian.github.io/tags/web/</link>
+    <description>Recent content in Web on 叶落天博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 17 Oct 2019 20:01:08 +0800</lastBuildDate>
+    
+	<atom:link href="https://yeluotian.github.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python Notebook</title>
+      <link>https://yeluotian.github.io/post/python-notebook/</link>
+      <pubDate>Thu, 17 Oct 2019 20:01:08 +0800</pubDate>
+      
+      <guid>https://yeluotian.github.io/post/python-notebook/</guid>
+      <description>&lt;p&gt;Python基础知识总结:&lt;/p&gt;
+
+&lt;p&gt;python2/3的差异，python函数的参数传递，python的异常处理机制，python高级特性&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Django Web Development</title>
+      <link>https://yeluotian.github.io/post/django-web-development/</link>
+      <pubDate>Sat, 12 Oct 2019 15:32:55 +0800</pubDate>
+      
+      <guid>https://yeluotian.github.io/post/django-web-development/</guid>
+      <description>&lt;p&gt;Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of Web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

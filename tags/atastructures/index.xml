@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>atastructures on 叶落天博客</title>
+    <link>https://yeluotian.github.io/tags/atastructures/</link>
+    <description>Recent content in atastructures on 叶落天博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 18 Oct 2019 20:30:41 +0800</lastBuildDate>
+    
+	<atom:link href="https://yeluotian.github.io/tags/atastructures/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python Algorithms Datastructures</title>
+      <link>https://yeluotian.github.io/post/python-algorithms-datastructures/</link>
+      <pubDate>Fri, 18 Oct 2019 20:30:41 +0800</pubDate>
+      
+      <guid>https://yeluotian.github.io/post/python-algorithms-datastructures/</guid>
+      <description>&lt;p&gt;Python常用的内置算法与数据结构&lt;/p&gt;
+
+&lt;p&gt;Python实现排序(快排，归并)，分析时间复杂度，稳定性与查找(二分查找)，&lt;/p&gt;
+
+&lt;p&gt;Python实现链表，队列，栈，堆(TOPK问题)，字典的实现的原理，哈希冲突解决，二叉树的先序/中序/后序&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
