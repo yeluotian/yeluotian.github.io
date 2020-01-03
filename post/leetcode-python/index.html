@@ -72,7 +72,7 @@
 
 <meta itemprop="datePublished" content="2019-10-31T23:24:24&#43;08:00" />
 <meta itemprop="dateModified" content="2019-10-31T23:24:24&#43;08:00" />
-<meta itemprop="wordCount" content="637">
+<meta itemprop="wordCount" content="936">
 
 
 
@@ -576,6 +576,85 @@
         
         return p
 </code></pre>
+
+<ol>
+<li><p>Image Overlap(20191113)
+Two images A and B are given, represented as binary, square matrices of the same size.  (A binary matrix has only 0s and 1s as values.)
+思路：图像经过翻转后，求最大重合部分，图像中的每一个点到另一个点的距离，距离相同最大的数，即为最大重合部分</p>
+
+<pre><code>Input: A = [[1,1,0],
+        [0,1,0],
+        [0,1,0]]
+   B = [[0,0,0],
+        [0,1,1],
+        [0,0,1]]
+Output: 3
+
+class Solution:
+def largestOverlap(self, A: List[List[int]], B: List[List[int]]) -&gt; int:
+    lena = len(A)
+    apos = [(row, col) for row in range(lena) for col in range(lena) if A[row][col]] 
+    bpos = [(row, col) for row in range(lena) for col in range(lena) if B[row][col]]
+    dist = {}  
+    maxlap = 0
+    for a in apos:
+        for b in bpos:
+            temp = (a[0]-b[0], a[1]-b[1])
+            dist[temp] = dist.get(temp, 0) + 1 
+            maxlap = max(maxlap, dist[temp]) 
+    return maxlap
+</code></pre></li>
+
+<li><p>Merge Two Sorted Lists (20200103)</p>
+
+<pre><code>(1)循环
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution:
+def mergeTwoLists(self, l1: ListNode, l2: ListNode) -&gt; ListNode:
+    if l1 == None and l2 == None:
+        return None
+    if l1 == None:
+        return l2
+    if l2 == None:
+        return l1
+        
+    root = ListNode(0)
+    p = root
+    while l1 and l2:
+        if l1.val &lt;= l2.val:
+            p.next = l1
+            l1 = l1.next
+        else:
+            p.next = l2
+            l2 = l2.next
+        p = p.next
+    if l1:
+        p.next = l1
+    else:
+        p.next = l2
+    return root.next
+(2) 递归
+class Solution:
+def mergeTwoLists(self, l1: ListNode, l2: ListNode) -&gt; ListNode:
+    if l1==None and l2==None:
+        return None
+    if l1==None:
+        return l2
+    if l2==None:
+        return l1
+    if l1.val&lt;=l2.val:
+        l1.next=self.mergeTwoLists(l1.next,l2)
+        return l1
+    else:
+        l2.next=self.mergeTwoLists(l1,l2.next)
+        return l2
+
+</code></pre></li>
+</ol>
     </div>
 
     
@@ -699,7 +778,7 @@
     &copy;
     
       2017 -
-    2019
+    2020
     <span class="heart">
       
       <i class="iconfont">

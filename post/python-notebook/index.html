@@ -77,7 +77,7 @@ python2/3的差异，python函数的参数传递，python的异常处理机制�
 
 <meta itemprop="datePublished" content="2019-10-17T20:01:08&#43;08:00" />
 <meta itemprop="dateModified" content="2019-10-17T20:01:08&#43;08:00" />
-<meta itemprop="wordCount" content="1316">
+<meta itemprop="wordCount" content="1577">
 
 
 
@@ -411,6 +411,7 @@ python2/3的差异，python函数的参数传递，python的异常处理机制�
 </ul></li>
 <li><a href="#eval-函数">eval()函数</a></li>
 <li><a href="#浅拷贝和深拷贝">浅拷贝和深拷贝</a></li>
+<li><a href="#实例属性查找过程">实例属性查找过程</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -662,6 +663,18 @@ True
 &gt;&gt;&gt; l5
 [[1, 2, 3, 0], (3, 4)]
 </code></pre>
+
+<h2 id="实例属性查找过程">实例属性查找过程</h2>
+
+<p>1.初级印象：先查找实例有没有这个属性，再查找类有没有这个属性，最后若没有，就报错。
+2.详细属性查找过程：
+一.若这个实例属性出现在类或其基类<strong>dict</strong>中，而且是数据属性描述符，则调用其<strong>get</strong>方法
+二.若这个实例属性出现在实例中，则调用实例中的<strong>dict</strong>[attr]，否则
+三.若这个实例属性出现类或其基类中，
+    （一）实例属性为非数据属性描述符，则调用其<strong>get</strong>方法,否则
+    （二）调用类中的<strong>dict</strong>[&lsquo;attr&rsquo;]
+四.若这个类中有<strong>getattr</strong>方法，则调用其方法
+五.抛出AttributeError</p>
     </div>
 
     
@@ -785,7 +798,7 @@ True
     &copy;
     
       2017 -
-    2019
+    2020
     <span class="heart">
       
       <i class="iconfont">
